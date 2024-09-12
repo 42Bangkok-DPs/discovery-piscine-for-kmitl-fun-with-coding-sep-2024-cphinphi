@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random BG Color</title>
+        
+        <link rel="stylesheet" href="backgroound.css">
+
+</head>
+<body>
+
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 12)];
+            }
+            return color;
+        }
+
+        function BGColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+    </script>
+
+    <button onclick="BGColor()">Click me!</button>
+
+</body>
+</html>
