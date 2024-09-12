@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math</title>
+</head>
+<body>
+
+    <input type="text" id="InputL" placeholder="Enter numbers">
+
+    <select id="symbol">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <input type="text" id="InputR" placeholder="Enter numbers">
+
+    <input type="button" value="Try me!" onclick="calculate()">
+
+    <script>
+       function calculate() {
+        const L =parseInt(document.getElementById('InputL').value);
+        const R =parseInt(document.getElementById('InputR').value);
+        const operator = document.getElementById('symbol').value;
+
+        if (isNaN(L) || isNaN(R) || L < 0 || R < 0) {
+                alert('Error');
+                return;
+        }
+
+        if ((operator === '/' || operator === '%') && R === 0) {
+                alert("It's over 9000!");
+                return;
+            }
+
+            let result;
+            switch (operator) {
+                case '+':
+                    result = L + R;
+                    break;
+                case '-':
+                    result = L - R;
+                    break;
+                case '*':
+                    result = L * R;
+                    break;
+                case '/':
+                    result = L / R;
+                    break;
+                case '%':
+                    result = L % R;
+                    break;
+                default:
+                    alert('Invalid operator');
+                    return; 
+                }
+               
+                alert(`Result: ${result}`);
+                console.log('Result:', result);
+            
+        }
+
+        
+
+        setInterval(function() {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+
+</body>
+</html>
