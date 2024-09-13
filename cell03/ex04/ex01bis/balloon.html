@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Balloontoom!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="balloon" id="balloon"></div>
+
+</body>
+
+<script>
+    let size = 200;
+    let colors = ['red', 'green', 'blue'];
+    let colorIndex = 0;
+
+    $(document).ready(function () {
+        const $balloon = $('#balloon');
+
+        //กดเปลี่ยนสีเพิ่มขนาด
+        $balloon.click(function () {
+            if (size >= 420) {
+                size = 200;
+            } else {
+                size += 10;
+            }
+            $balloon.css({
+                'width': size + 'px',
+                'height': size + 'px'
+            });
+
+            //เปลี่ยนสี
+            colorIndex = (colorIndex + 1) % colors.length;
+            $balloon.css('background-color', colors[colorIndex]);
+        });
+
+        // ลดขนาดเปลี่ยนสี
+        $balloon.mouseleave(function () {
+            if (size > 200) {
+                size -= 5;
+                $balloon.css({
+                    'width': size + 'px',
+                    'height': size + 'px'
+                });
+
+                // เปลี่ยนสีย้กลับ
+                colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+                $balloon.css('background-color', colors[colorIndex]);
+            }
+        });
+    });
+</script>
+
+</html>

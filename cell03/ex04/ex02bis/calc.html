@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Math Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <input type="text" id="InputL" placeholder="Enter numbers">
+    <select id="symbol">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="InputR" placeholder="Enter numbers">
+    <input type="button" value="Try me!" id="calculateButton">
+
+    <p id="result"></p> 
+
+    <script>
+        $(document).ready(function () {
+            $('#calculateButton').click(function () {
+                const L = parseFloat($('#InputL').val());
+                const R = parseFloat($('#InputR').val());
+                const operator = $('#symbol').val();
+
+                if (isNaN(L) || isNaN(R)) {
+                    alert('Please enter valid numbers');
+                    return;
+                }
+
+                if ((operator === '/' || operator === '%') && R === 0) {
+                    alert("It's over 9000! (Division by zero is not allowed)");
+                    return;
+                }
+
+                let result;
+                switch (operator) {
+                    case '+':
+                        result = L + R;
+                        break;
+                    case '-':
+                        result = L - R;
+                        break;
+                    case '*':
+                        result = L * R;
+                        break;
+                    case '/':
+                        result = L / R;
+                        break;
+                    case '%':
+                        result = L % R;
+                        break;
+                    default:
+                        alert('Invalid operator');
+                        return;
+                }
+
+                $('#result').text(`Result: ${result}`);
+            });
+
+     
+            setInterval(function () {
+                alert('Please, use me...');
+            }, 30000);
+        });
+    </script>
+
+</body>
+
+</html>

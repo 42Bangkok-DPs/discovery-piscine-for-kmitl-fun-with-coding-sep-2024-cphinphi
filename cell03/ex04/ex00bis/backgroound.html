@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random BG Color</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="backgroound.css">
+
+</head>
+<body>
+
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("body").css("background-color", getRandomColor());
+            });
+        });
+    </script>
+
+    <button>Click me!</button>
+
+</body>
+</html>
