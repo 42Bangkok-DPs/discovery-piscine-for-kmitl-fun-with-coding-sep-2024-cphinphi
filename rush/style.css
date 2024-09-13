@@ -1,0 +1,42 @@
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(https://curriculum.kmitl.ac.th/wp-content/uploads/2024/05/kbs2024-cover-768x432.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+.banner {
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 40px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 3px solid black;
+    background-color: lightgray;
+    cursor: pointer;
+}
+.box {
+    width: 60%;
+    background-image: linear-gradient(rgba(43, 133, 160, 0.74), rgba(23, 23, 158, 0.74)) ;
+    border-radius: 25px;
+    margin: auto;
+    border: 3px solid;
+}
+a {
+    text-decoration: none;
+    margin: 20px;
+}
