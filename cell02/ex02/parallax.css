@@ -1,0 +1,59 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.parallax {
+    background-image: url('https://c.wallhere.com/photos/33/78/0_Unicorn_Gundam_1920x1080_px_Mobile_Suit_Gundam_Mobile_Suit_Gundam_Unicorn_RX_Simple-1182656.jpg!d');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax h1 {
+    position: absolute;
+    color: white;
+    font-size: 3em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.block {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.block h2 {
+    font-size: 2em;
+    color: #333;
+    margin: 0;
+}
+
+.parallax2 {
+    background-image: url('https://i.pinimg.com/originals/4d/b3/f6/4db3f6f4928aa6966b6c8a9fc6b6c592.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax2 h1 {
+    position: absolute;
+    color: white;
+    font-size: 3em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
